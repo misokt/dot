@@ -1,10 +1,7 @@
-# general aliases
-alias et="exiftool" # https://www.exiftool.org/install.html
-alias cat="bat" # https://github.com/sharkdp/bat
-alias ls="lsd" # https://github.com/lsd-rs/lsd
-alias l="lsd -la"
-alias ll="lsd -l"
-alias lt="lsd --tree"
+alias cat="cat -n"
+alias ls="ls --color=auto --time-style='+%d %b %Y %H:%M:%S' --sort name -vh"
+alias l="ls -la"
+alias ll="ls -l"
 alias rm="rm -iv"
 alias cp="cp -v"
 alias mv="mv -iv"
