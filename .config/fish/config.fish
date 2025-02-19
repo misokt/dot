@@ -1,8 +1,0 @@
-alias cat="cat -n"
-alias ls="ls --color=auto --time-style='+%d %b %Y %H:%M:%S' --sort name -vh"
-alias l="ls -la"
-alias ll="ls -l"
-alias rm="rm -iv"
-alias cp="cp -v"
-alias mv="mv -iv"
-alias open="xdg-open"

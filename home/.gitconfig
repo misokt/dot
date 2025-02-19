@@ -1,6 +1,6 @@
 [init]
-defaultBranch = main
+	defaultBranch = main
 
 [core]
-fileMode = false
-editor = zeditor --wait
+	fileMode = false
+	editor = zeditor --wait

@@ -4,4 +4,3 @@ mp.add_hook('on_load', 10, function ()
   mp.set_property_native('sub-file-paths', sub_paths)
   sub_paths[#sub_paths]=nil
 end)
-
