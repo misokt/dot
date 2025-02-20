@@ -1,12 +1,13 @@
 (setq custom-file "~/.emacs.custom.el")
 
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))
-  backup-by-copying t
-  version-control t
-  kept-new-versions 6
-  kept-old-versions 3
-  delete-old-versions t
-  )
+      backup-by-copying t
+      version-control t
+      kept-new-versions 6
+      kept-old-versions 3
+      delete-old-versions t)
+
+(setq default-frame-alist '((fullscreen . maximized)))
 
 ; show packages from melpa too
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -23,18 +24,22 @@
 ; (set-frame-font "{font name} {font-size}" nil t)
 
 ; line numbers
-(column-number-mode 1)
-(display-line-numbers-mode 1)
-(global-display-line-numbers-mode 1)
+(global-display-line-numbers-mode t)
+(column-number-mode t)
 (setq display-line-numbers-type 'relative)
 
-; (hl-line-mode 1)
-(global-hl-line-mode 1)
+(global-hl-line-mode t)
 
-(cua-mode 1)
+(cua-mode t)
 
 ; buffer completion
-(ido-mode 1)
-(ido-everywhere 1)
+(ido-mode t)
+(ido-everywhere t)
+
+(add-to-list 'write-file-functions 'delete-trailing-whitespace)
+
+; supposedly insert spaces when pressing tab
+(setq indent-tabs-mode nil
+      tab-width 4)
 
 (load-file custom-file)
