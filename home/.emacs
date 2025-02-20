@@ -35,6 +35,9 @@
 ; buffer completion
 (ido-mode t)
 (ido-everywhere t)
+; completion for other areas too
+(require 'ido-completing-read+)
+(ido-ubiquitous-mode 1)
 
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 
