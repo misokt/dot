@@ -41,7 +41,7 @@ void add_to_map(Map *map, const char *key, const char *value)
 
 char** get_keys(Map *map)
 {
-  char **keys = malloc(sizeof(char*)*1024);
+  char **keys = malloc(sizeof(char*)*map->size);
   for (size_t i = 0; i < map->size; ++i)
     keys[i] = map->pair[i].key;
   return keys;
