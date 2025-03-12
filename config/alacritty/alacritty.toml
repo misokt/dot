@@ -15,8 +15,3 @@ dimensions.lines = 40
 
 [colors]
 draw_bold_text_with_bright_colors = false
-
-# set font
-# [font.normal]
-# family = "font name"
-# style = "Regular"
