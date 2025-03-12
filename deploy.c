@@ -74,14 +74,17 @@ Map* init_config()
 
   char *home_dir = getenv("HOME");
   assert(home_dir != NULL);
+  add_to_map(map, "home", home_dir);
 
   char config_dir[MAX_PATH_LENGTH];
   snprintf(config_dir, sizeof(config_dir), "%s/%s", home_dir, ".config");
+  add_to_map(map, "config", config_dir);
+
+  char emacs_d_dir[MAX_PATH_LENGTH];
+  snprintf(emacs_d_dir, sizeof(emacs_d_dir), "%s/%s", home_dir, ".emacs.d");
+  add_to_map(map, "emacs.d", emacs_d_dir);
 
   // char *root_dir = "/";
-
-  add_to_map(map, "home", home_dir);
-  add_to_map(map, "config", config_dir);
   // add_to_map(map, "root", root_dir);
 
   return map;
