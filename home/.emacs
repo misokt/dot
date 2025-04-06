@@ -26,7 +26,7 @@
 (setq whitespace-style '(face tabs spaces space-mark tab-mark))
 (global-whitespace-mode t)
 
-(defun remove-whitespace-and-tabs ()
+(defun remove-whitespace-and-tabs()
   "Remove whitespace and tabs from entire buffer"
   (interactive)
   (delete-trailing-whitespace)
@@ -47,6 +47,7 @@
 ;;; company
 (require 'company)
 (global-company-mode)
+(setq company-dabbrev-downcase nil)
 
 ;;; move text
 (require 'move-text)
@@ -64,6 +65,14 @@
 ;; buffer completion
 (ido-mode t)
 (ido-everywhere t)
+
+;;; smex
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
+; old M-x
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;;; ido-completing-read+
 ;; completion for other areas too
 (require 'ido-completing-read+)
 (ido-ubiquitous-mode 1)
