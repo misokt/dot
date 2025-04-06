@@ -27,16 +27,22 @@
 (global-whitespace-mode t)
 
 (defun remove-whitespace-and-tabs ()
+  "Remove whitespace and tabs from entire buffer"
   (interactive)
   (delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
-
 (add-hook 'before-save-hook 'remove-whitespace-and-tabs)
 
 (global-set-key (kbd "C-S-c") 'duplicate-line)
 
+; middle click pastes where cursor is; ignores where the mouse pointer is
+(setq mouse-yank-at-point t)
+
 ;; show packages from melpa too
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+;; C indent 4 spaces
+(setq-default c-basic-offset 4)
 
 ;;; company
 (require 'company)
