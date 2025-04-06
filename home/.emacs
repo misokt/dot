@@ -33,6 +33,8 @@
 
 (add-hook 'before-save-hook 'remove-whitespace-and-tabs)
 
+(global-set-key (kbd "C-S-c") 'duplicate-line)
+
 ;; show packages from melpa too
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
