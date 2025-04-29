@@ -215,16 +215,6 @@
    `(info-xref ((t (:foreground ,jr-dark-niagara))))
    `(info-visited ((t (:foreground ,jr-dark-wisteria))))
 
-   ;; Jabber
-   `(jabber-chat-prompt-foreign ((t ,(list :foreground jr-dark-quartz
-                                           :bold nil))))
-   `(jabber-chat-prompt-local ((t (:foreground ,jr-dark-yellow))))
-   `(jabber-chat-prompt-system ((t (:foreground ,jr-dark-green))))
-   `(jabber-rare-time-face ((t (:foreground ,jr-dark-green))))
-   `(jabber-roster-user-online ((t (:foreground ,jr-dark-green))))
-   `(jabber-activity-face ((t (:foreground ,jr-dark-red))))
-   `(jabber-activity-personal-face ((t (:foreground ,jr-dark-yellow :bold t))))
-
    ;; Line Highlighting
    `(highlight ((t (:background ,jr-dark-bg+1 :foreground nil))))
    `(highlight-current-line-face ((t ,(list :background jr-dark-bg+1
