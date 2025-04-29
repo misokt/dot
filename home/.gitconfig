@@ -3,4 +3,4 @@
 
 [core]
     fileMode = false
-    editor = nano -lc
+    editor = nvim 
