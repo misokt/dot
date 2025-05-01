@@ -1,7 +1,6 @@
 ;;; jr-dark-theme.el --- Jr Dark color theme for Emacs.
 
-(deftheme jr-dark
-  "Jr Dark color theme for Emacs")
+(deftheme jr-dark "Jr Dark color theme for Emacs")
 
 (let ((jr-dark-fg        "#e4e4ef")
       (jr-dark-fg+1      "#f4f4ff")
@@ -9,7 +8,7 @@
       (jr-dark-white     "#ffffff")
       (jr-dark-black     "#000000")
       (jr-dark-bg-1      "#101010")
-      (jr-dark-bg        "#181818")
+      (jr-dark-bg        "#121212")
       (jr-dark-bg+1      "#282828")
       (jr-dark-bg+2      "#453d41")
       (jr-dark-bg+3      "#484848")
@@ -26,21 +25,13 @@
       (jr-dark-niagara   "#96a6c8")
       (jr-dark-wisteria  "#9e95c7")
       )
+
   (custom-theme-set-variables
    'jr-dark
    '(frame-brackground-mode (quote dark)))
 
   (custom-theme-set-faces
    'jr-dark
-
-   ;; Agda2
-   `(agda2-highlight-datatype-face ((t (:foreground ,jr-dark-quartz))))
-   `(agda2-highlight-primitive-type-face ((t (:foreground ,jr-dark-quartz))))
-   `(agda2-highlight-function-face ((t (:foreground ,jr-dark-niagara))))
-   `(agda2-highlight-keyword-face ((t ,(list :foreground jr-dark-yellow
-                                             :bold t))))
-   `(agda2-highlight-inductive-constructor-face ((t (:foreground ,jr-dark-green))))
-   `(agda2-highlight-number-face ((t (:foreground ,jr-dark-wisteria))))
 
    ;; AUCTeX
    `(font-latex-bold-face ((t (:foreground ,jr-dark-quartz :bold t))))
@@ -187,25 +178,6 @@
        (:underline (:style wave :color ,jr-dark-yellow) :inherit unspecified))
       (t (:foreground ,jr-dark-yellow :weight bold :underline t))))
 
-   ;; Helm
-   `(helm-candidate-number ((t ,(list :background jr-dark-bg+2
-                                      :foreground jr-dark-yellow
-                                      :bold t))))
-   `(helm-ff-directory ((t ,(list :foreground jr-dark-niagara
-                                  :background jr-dark-bg
-                                  :bold t))))
-   `(helm-ff-executable ((t (:foreground ,jr-dark-green))))
-   `(helm-ff-file ((t (:foreground ,jr-dark-fg :inherit unspecified))))
-   `(helm-ff-invalid-symlink ((t ,(list :foreground jr-dark-bg
-                                        :background jr-dark-red))))
-   `(helm-ff-symlink ((t (:foreground ,jr-dark-yellow :bold t))))
-   `(helm-selection-line ((t (:background ,jr-dark-bg+1))))
-   `(helm-selection ((t (:background ,jr-dark-bg+1 :underline nil))))
-   `(helm-source-header ((t ,(list :foreground jr-dark-yellow
-                                   :background jr-dark-bg
-                                   :box (list :line-width -1
-                                              :style 'released-button)))))
-
    ;; Ido
    `(ido-first-match ((t (:foreground ,jr-dark-yellow :bold nil))))
    `(ido-only-match ((t (:foreground ,jr-dark-brown :weight bold))))
@@ -259,9 +231,6 @@
    `(mode-line-inactive ((t ,(list :background jr-dark-bg+1
                                    :foreground jr-dark-quartz))))
 
-   ;; Neo Dir
-   `(neo-dir-link-face ((t (:foreground ,jr-dark-niagara))))
-
    ;; Org Mode
    `(org-agenda-structure ((t (:foreground ,jr-dark-niagara))))
    `(org-column ((t (:background ,jr-dark-bg-1))))
@@ -285,12 +254,6 @@
    ;; Show Paren
    `(show-paren-match-face ((t (:background ,jr-dark-bg+4))))
    `(show-paren-mismatch-face ((t (:background ,jr-dark-red-1))))
-
-   ;; Slime
-   `(slime-repl-inputed-output-face ((t (:foreground ,jr-dark-red))))
-
-   ;; Tuareg
-   `(tuareg-font-lock-governing-face ((t (:foreground ,jr-dark-yellow))))
 
    ;; Speedbar
    `(speedbar-directory-face ((t ,(list :foreground jr-dark-niagara
@@ -330,16 +293,6 @@
    `(tab-bar-tab ((t (:background nil :foreground ,jr-dark-yellow :weight bold))))
    `(tab-bar-tab-inactive ((t (:background nil))))
 
-   ;; vterm / ansi-term
-   `(term-color-black ((t (:foreground ,jr-dark-bg+3 :background ,jr-dark-bg+4))))
-   `(term-color-red ((t (:foreground ,jr-dark-red-1 :background ,jr-dark-red-1))))
-   `(term-color-green ((t (:foreground ,jr-dark-green :background ,jr-dark-green))))
-   `(term-color-blue ((t (:foreground ,jr-dark-niagara :background ,jr-dark-niagara))))
-   `(term-color-yellow ((t (:foreground ,jr-dark-yellow :background ,jr-dark-yellow))))
-   `(term-color-magenta ((t (:foreground ,jr-dark-wisteria :background ,jr-dark-wisteria))))
-   `(term-color-cyan ((t (:foreground ,jr-dark-quartz :background ,jr-dark-quartz))))
-   `(term-color-white ((t (:foreground ,jr-dark-fg :background ,jr-dark-white))))
-
    ;; company-mode
    `(company-tooltip ((t (:foreground ,jr-dark-fg :background ,jr-dark-bg+1))))
    `(company-tooltip-annotation ((t (:foreground ,jr-dark-brown :background ,jr-dark-bg+1))))
@@ -364,7 +317,7 @@
    ))
 
 ;;;###autoload
-(when load-file-name
+(when (and (boundp 'custom-theme-load-path) load-file-name)
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 

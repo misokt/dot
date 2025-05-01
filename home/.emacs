@@ -24,7 +24,7 @@
 (global-hl-line-mode t)
 
 (setq whitespace-style '(face tabs spaces space-mark tab-mark))
-(global-whitespace-mode t)
+;; (global-whitespace-mode t)
 
 (defun remove-whitespace-and-tabs()
   "Remove whitespace and tabs from entire buffer"

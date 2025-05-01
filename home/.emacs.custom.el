@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(jr-dark))
  '(custom-safe-themes
-   '("5e1f38223c601d145292f49f4aba1af01b9d9041d55428a3ece051f65eb0c7ea"))
+   '("1383b2aa56b7c4e896093c8686262ea2f9d415e1991cf6856b36ab321e10222f"))
  '(dired-listing-switches "-alhv")
  '(package-selected-packages
    '(company go-mode ido-completing-read+ markdown-mode move-text smex)))
