@@ -8,3 +8,5 @@ alias rm="rm -iv"
 alias cp="cp -v"
 alias mv="mv -iv"
 alias open="xdg-open"
+
+echo "( +_+)"

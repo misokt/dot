@@ -131,8 +131,8 @@
 
    ;; Font Lock
    `(font-lock-builtin-face ((t (:foreground ,jr-dark-yellow))))
-   `(font-lock-comment-face ((t (:foreground ,jr-dark-brown))))
-   `(font-lock-comment-delimiter-face ((t (:foreground ,jr-dark-brown))))
+   `(font-lock-comment-face ((t (:foreground ,jr-dark-brown :italic t))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,jr-dark-brown :italic t))))
    `(font-lock-constant-face ((t (:foreground ,jr-dark-quartz))))
    `(font-lock-doc-face ((t (:foreground ,jr-dark-green))))
    `(font-lock-doc-string-face ((t (:foreground ,jr-dark-green))))

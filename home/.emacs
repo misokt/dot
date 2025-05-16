@@ -15,6 +15,7 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
+(blink-cursor-mode 0)
 (setq inhibit-startup-screen t)
 
 (setq-default tab-width 4)
@@ -23,7 +24,7 @@
 (cua-mode t)
 (global-hl-line-mode t)
 
-(setq whitespace-style '(face tabs spaces space-mark tab-mark))
+(setq whitespace-style '(face trailing tabs spaces space-mark tab-mark))
 ;; (global-whitespace-mode t)
 
 (defun remove-whitespace-and-tabs()
@@ -77,7 +78,7 @@
 (require 'ido-completing-read+)
 (ido-ubiquitous-mode 1)
 
-;; auto close bracket insertion
+;; auto insert matching closing delimiters
 (electric-pair-mode t)
 
 (load-file custom-file)

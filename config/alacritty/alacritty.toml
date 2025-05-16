@@ -1,5 +1,5 @@
-[keyboard]
-bindings = [{ action = "SpawnNewInstance", key = "N", mods = "Control" }]
+# [keyboard]
+# bindings = [{ action = "SpawnNewInstance", key = "N", mods = "Control" }]
 
 [scrolling]
 history = 100000
@@ -10,8 +10,15 @@ dynamic_title = false
 opacity = 1
 padding.x = 5
 padding.y = 5
-dimensions.columns = 130
-dimensions.lines = 40
+dimensions.columns = 160
+dimensions.lines   = 45
+
+[font]
+normal.family = "Iosevka Fixed"
+normal.style  = "Regular"
+size = 14
 
 [colors]
+primary.foreground = "#eeeeee"
+primary.background = "#121212"
 draw_bold_text_with_bright_colors = false
