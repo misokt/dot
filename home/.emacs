@@ -15,7 +15,7 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
-(blink-cursor-mode 0)
+; (blink-cursor-mode 0)
 (setq inhibit-startup-screen t)
 
 (setq-default tab-width 4)
@@ -26,6 +26,7 @@
 
 (setq whitespace-style '(face trailing tabs spaces space-mark tab-mark))
 ;; (global-whitespace-mode t)
+(add-hook 'prog-mode-hook 'whitespace-mode)
 
 (defun remove-whitespace-and-tabs()
   "Remove whitespace and tabs from entire buffer"
@@ -34,16 +35,13 @@
   (untabify (point-min) (point-max)))
 (add-hook 'before-save-hook 'remove-whitespace-and-tabs)
 
-(global-set-key (kbd "C-S-c") 'duplicate-line)
+(global-set-key (kbd "C-S-d") 'duplicate-line)
 
 ; middle click pastes where cursor is; ignores where the mouse pointer is
 (setq mouse-yank-at-point t)
 
 ;; show packages from melpa too
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-
-;; C indent 4 spaces
-(setq-default c-basic-offset 4)
 
 ;;; company
 (require 'company)
@@ -78,7 +76,17 @@
 (require 'ido-completing-read+)
 (ido-ubiquitous-mode 1)
 
+;;; multiple-cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-S-c C-<") 'mc/mark-all-like-this)
+
 ;; auto insert matching closing delimiters
 (electric-pair-mode t)
+
+;; C indent 4 spaces
+(setq-default c-basic-offset 4)
 
 (load-file custom-file)
