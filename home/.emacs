@@ -37,6 +37,13 @@
 
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 
+;; Opens the buffer list in current window
+;; (global-set-key (kbd "C-x C-b") 'buffer-menu)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; Quick switch between two recently used buffers
+(global-set-key (kbd "M-o") 'mode-line-other-buffer)
+
 ; middle click pastes where cursor is; ignores where the mouse pointer is
 (setq mouse-yank-at-point t)
 

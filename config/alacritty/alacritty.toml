@@ -6,7 +6,7 @@ history = 100000
 multiplier = 3
 
 [window]
-dynamic_title = false
+dynamic_title = true 
 opacity = 1
 padding.x = 5
 padding.y = 5
@@ -22,3 +22,4 @@ size = 14
 primary.foreground = "#eeeeee"
 primary.background = "#121212"
 draw_bold_text_with_bright_colors = false
+
