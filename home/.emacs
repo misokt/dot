@@ -23,6 +23,7 @@
 
 (cua-mode t)
 (global-hl-line-mode t)
+(global-visual-line-mode t)
 
 (setq whitespace-style '(face trailing tabs spaces space-mark tab-mark))
 ;; (global-whitespace-mode t)
